@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Volatility Trading Academy</title>
+<meta name="description" content="Simulated portfolio: long and short positions, order history, realized P&L, and equity over time.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>window.SITE_BASE=""; window.ACTIVE_NAV="portfolio";</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page">
+  <div class="summary-grid">
+    <div class="summary-card"><div class="label">Cash</div><div class="value mono" id="p-cash">--</div></div>
+    <div class="summary-card"><div class="label">Total Equity</div><div class="value mono" id="p-equity">--</div></div>
+    <div class="summary-card"><div class="label">Realized P&amp;L</div><div class="value mono" id="p-realized">--</div></div>
+    <div class="summary-card"><div class="label">Unrealized P&amp;L</div><div class="value mono" id="p-unrealized">--</div></div>
+  </div>
+
+  <div class="card">
+    <div class="section-title">Equity Over Time</div>
+    <div class="chart-box chart-box-sm"><canvas id="equity-chart"></canvas></div>
+  </div>
+
+  <div class="card">
+    <div class="section-title">Long Positions</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Symbol</th><th>Qty</th><th>Avg Cost</th><th>Mark</th><th>Mkt Value</th><th>Unrealized</th><th>%</th><th></th></tr></thead>
+        <tbody id="long-body"><tr class="empty-row"><td colspan="8">Loading…</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="section-title">Short Positions</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Symbol</th><th>Qty</th><th>Avg Entry</th><th>Mark</th><th>Liability</th><th>Unrealized</th><th>%</th><th></th></tr></thead>
+        <tbody id="short-body"><tr class="empty-row"><td colspan="8">Loading…</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="section-title">Order &amp; Trade History</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Time</th><th>Symbol</th><th>Side</th><th>Type</th><th>Qty</th><th>Price</th><th>Status</th></tr></thead>
+        <tbody id="orders-body"><tr class="empty-row"><td colspan="7">Loading…</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/js/price-engine.js"></script>
+<script src="assets/js/portfolio-engine.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/charts.js"></script>
+<script src="assets/js/portfolio.js"></script>
+</body>
+</html>

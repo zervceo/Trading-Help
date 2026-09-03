@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — Volatility Trading Academy</title>
+<meta name="description" content="Paper-trading dashboard: simulated portfolio, watchlist, and volatility trading lessons. Education only, no real market data.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>window.SITE_BASE=""; window.ACTIVE_NAV="dashboard";</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page">
+  <div class="summary-grid">
+    <div class="summary-card">
+      <div class="label">Cash Balance</div>
+      <div class="value mono" id="sum-cash">--</div>
+      <div class="sub">Available buying power</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">Total Equity</div>
+      <div class="value mono" id="sum-equity">--</div>
+      <div class="sub" id="sum-positions-sub">-- open positions</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">Total P&amp;L</div>
+      <div class="value mono" id="sum-pnl">--</div>
+      <div class="sub">Since $100,000 start</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">Day P&amp;L</div>
+      <div class="value mono" id="sum-day-pnl">--</div>
+      <div class="sub">Change today</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:24px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+    <div>
+      <div class="section-title" style="margin-bottom:4px;">Trading Desk</div>
+      <p style="margin:0; color:var(--text-dim); font-size:13.5px;">Live simulated prices are ticking now. Jump in and place a trade.</p>
+    </div>
+    <a class="btn btn-buy" href="trade.html">Go to Trade &rarr;</a>
+  </div>
+
+  <h2 class="section-title">Watchlist — Simulated Tickers</h2>
+  <div class="watchlist" id="watchlist"></div>
+
+  <hr class="hr" style="margin:32px 0;">
+
+  <h2 class="section-title">Continue Learning</h2>
+  <div class="strategy-grid" id="lesson-links"></div>
+
+  <div class="footer">All prices are simulated. Volatility Trading Academy is a paper-trading education tool — not real market data, not investment advice. <a href="about.html" style="color:var(--accent);">Learn how it works &rarr;</a></div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/js/price-engine.js"></script>
+<script src="assets/js/portfolio-engine.js"></script>
+<script src="assets/js/strategies-data.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/charts.js"></script>
+<script src="assets/js/dashboard.js"></script>
+</body>
+</html>

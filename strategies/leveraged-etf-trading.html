@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leveraged ETF Trading — Volatility Trading Academy</title>
+<meta name="description" content="Learn how 2x/3x leveraged ETFs work, daily-reset decay risk, and practice with a simulated leveraged ETF.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>window.SITE_BASE="../"; window.ACTIVE_NAV="strategies"; window.LESSON_ID="leveraged-etf-trading";</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page page-narrow">
+  <div class="lesson-header">
+    <span class="lesson-tag">Lesson 5 of 7 · Volatility Rating ●●●●●</span>
+    <h1>Leveraged ETF Trading</h1>
+    <p style="color:var(--text-dim); margin:0;">2x and 3x daily-leveraged ETFs amplify short-term moves — and quietly compound losses through volatility decay if held too long.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>What It Is &amp; Why It's Volatile</h2>
+    <p>A leveraged ETF is designed to deliver a multiple (typically 2x or 3x) of an underlying index's <i>daily</i> return. If the index rises 1% today, a 3x fund aims to rise roughly 3%; if the index falls 1%, the fund falls roughly 3%. That leverage is reset every single day — which is the critical, and most misunderstood, detail of the entire product category.</p>
+    <p>Because leverage is applied daily and then reset, leveraged ETFs are explicitly built for short holding periods. Over any period longer than a day, their returns can diverge significantly from "3x the index's return over that period" — especially in choppy, volatile, sideways markets.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Typical Mechanics — and the Decay Problem</h2>
+    <ul>
+      <li><b>Daily reset:</b> leverage is recalculated at the end of every trading day based on that day's starting value, not your personal entry price.</li>
+      <li><b>Volatility decay (a.k.a. "beta slippage"):</b> in a choppy or sideways market, daily compounding of leveraged returns produces a fund value <i>lower</i> than an un-leveraged investor would expect — even if the underlying index is roughly flat over the period. Example intuition: index up 10% then down 10% roughly round-trips to about -1%; a 3x fund suffering 3x moves each day compounds to a noticeably larger loss, not just 3x that -1%.</li>
+      <li><b>Entry signals:</b> a strong, sustained directional move where you want amplified short-term exposure without using margin yourself.</li>
+      <li><b>Exit signals:</b> leveraged ETF positions should be actively managed and closed quickly — they are not "buy and hold" instruments.</li>
+      <li><b>Holding period:</b> hours to a few days at most; the decay effect compounds the longer the fund is held through choppy price action.</li>
+    </ul>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Walkthrough Example — TRIX</h2>
+    <p><b>TriplEdge 3x Bull ETF (TRIX)</b> is the academy's leveraged-ETF sim, modeled with extreme volatility (~110% annualized) and a persistent negative drift bias that represents the real-world compounding decay these products experience when their underlying chops around rather than trending cleanly.</p>
+    <p>On the Trade page, open TRIX's 1D chart and compare it to a calmer name like NOVA. You'll see TRIX swings far more violently tick to tick. Buy a small position and watch it closely — notice how quickly unrealized P&amp;L moves in both directions compared to a normal stock, and how a string of up-then-down ticks tends to leave you worse off than a simple "did the price end higher or lower" read would suggest.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Key Risks &amp; Common Mistakes</h2>
+    <div class="callout callout-risk">Holding a leveraged ETF for weeks or months expecting "3x the index's long-term return" is one of the most common and costly misunderstandings in retail trading — daily-reset decay can produce a loss even when the underlying index is flat or modestly positive over that same period.</div>
+    <ul>
+      <li><b>Buy-and-hold mentality:</b> treating a daily-reset product like a long-term index fund.</li>
+      <li><b>Underestimating decay in choppy markets:</b> the decay effect is worst precisely when the market is volatile but directionless — exactly the environment that attracts traders to leveraged products in the first place.</li>
+      <li><b>Oversized positions:</b> because the fund is already leveraged, adding a large position size effectively double-stacks leverage risk.</li>
+      <li><b>No active exit plan:</b> failing to set a tight timeframe and stop, given how fast these products can move against you.</li>
+    </ul>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Practice This Strategy</h2>
+    <p>Run this drill on the trading desk with TRIX preselected:</p>
+    <ol class="checklist">
+      <li><b>1.</b> Open TRIX's 1D chart and observe several ticks to see how much larger its swings are versus a blue-chip sim like NOVA or STDY.</li>
+      <li><b>2.</b> Place a small <b>Market Buy</b> — keep the position size modest given the amplified volatility.</li>
+      <li><b>3.</b> Set a short mental time limit for the trade (e.g., "I will close this within the next several ticks").</li>
+      <li><b>4.</b> Watch how quickly unrealized P&amp;L swings compared to a standard long position you may have taken in an earlier lesson.</li>
+      <li><b>5.</b> Close the position with a <b>Market Sell</b> once your time limit is reached, regardless of whether you're up or down — reinforcing that leveraged ETFs are short-duration tools, not holds.</li>
+    </ol>
+    <div class="lesson-actions">
+      <a class="btn btn-buy" href="../trade.html?symbol=TRIX">Practice on TRIX &rarr;</a>
+      <button class="btn btn-ghost" id="complete-btn">Mark Lesson Complete</button>
+    </div>
+  </div>
+
+  <div class="lesson-nav">
+    <a href="options-straddle-strangle.html">&larr; Options Straddles / Strangles</a>
+    <a href="penny-stock-trading.html">Next: Penny Stock Trading &rarr;</a>
+  </div>
+</main>
+
+<script src="../assets/js/price-engine.js"></script>
+<script src="../assets/js/portfolio-engine.js"></script>
+<script src="../assets/js/strategies-data.js"></script>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/lesson.js"></script>
+</body>
+</html>

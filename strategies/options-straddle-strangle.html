@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Options Straddles / Strangles — Volatility Trading Academy</title>
+<meta name="description" content="Learn how straddle and strangle options strategies profit from volatility itself, and practice the underlying-share concept.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>window.SITE_BASE="../"; window.ACTIVE_NAV="strategies"; window.LESSON_ID="options-straddle-strangle";</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page page-narrow">
+  <div class="lesson-header">
+    <span class="lesson-tag">Lesson 4 of 7 · Volatility Rating ●●●●○</span>
+    <h1>Options Straddles &amp; Strangles</h1>
+    <p style="color:var(--text-dim); margin:0;">Volatility-based options strategies that profit from a big move in either direction — you're betting on magnitude, not direction.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>What It Is &amp; Why It's Volatile</h2>
+    <p>A <b>straddle</b> is bought by purchasing both a call option and a put option on the same stock, at the same strike price and expiration. A <b>strangle</b> is the cheaper cousin: a call and a put at two different (out-of-the-money) strikes, same expiration. Both positions profit if the underlying stock makes a large move — up <i>or</i> down — before expiration, because one leg gains far more than the other leg loses. They lose value if the stock stays flat, since both options simply decay toward worthless (a cost known as "theta decay").</p>
+    <p>These are pure volatility trades: the trader isn't predicting direction at all, only that the stock will move more than the options market currently expects. That's why they're deployed around known volatility catalysts — earnings reports, product launches, regulatory decisions — where a big move is likely but the direction is genuinely uncertain.</p>
+    <div class="callout">This simulator trades the underlying shares only, not options contracts. This lesson is conceptual — it explains how professional traders think about volatility exposure — and the practice drill below uses shares to illustrate the "big move either direction" payoff logic, not literal option pricing.</div>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Typical Mechanics</h2>
+    <ul>
+      <li><b>Entry signal:</b> implied volatility looks cheap relative to the expected magnitude of an upcoming catalyst — the options market isn't pricing in enough movement.</li>
+      <li><b>Breakeven math:</b> a straddle needs the stock to move beyond the combined cost of both options (in either direction) by expiration just to break even.</li>
+      <li><b>Exit signals:</b> close the position once the anticipated volatility event has passed and implied volatility collapses ("vol crush"), or once the underlying has made its move and one leg has captured meaningful profit.</li>
+      <li><b>Holding period:</b> typically days to a couple of weeks, timed around the specific catalyst.</li>
+      <li><b>Position sizing:</b> options premium is the entire capital at risk (100% loss is possible if the stock doesn't move enough), so straddles/strangles are usually sized as a small percentage of a portfolio.</li>
+    </ul>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Walkthrough Example — GLOW</h2>
+    <p><b>Glowtide Semiconductor (GLOW)</b> is one of the academy's earnings-volatility sims (~58% annualized volatility with occasional large jump events), a good stand-in for a name heading into a binary catalyst. In real markets, a trader expecting a big GLOW move but unsure of direction might buy a straddle. To translate the "profit from movement either way" concept into this share-only simulator, the drill below has you take a small position and simply watch how a sudden volatility spike affects mark-to-market value regardless of direction — the same intuition that makes straddles work.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Key Risks &amp; Common Mistakes</h2>
+    <div class="callout callout-risk">Theta decay is constant and working against you: every day the stock doesn't move, both legs of a straddle/strangle lose value, even if your directional instinct is eventually right.</div>
+    <ul>
+      <li><b>Buying volatility that's already expensive:</b> paying up for a straddle right before a widely-anticipated event, when the market has already priced in a big move (implied volatility is elevated, making the breakeven range wide).</li>
+      <li><b>Ignoring "vol crush":</b> even a correct directional move can lose money if implied volatility collapses faster than the stock moves, especially right after the catalyst passes.</li>
+      <li><b>Holding too long:</b> letting time decay erode a stagnant position instead of cutting it once the thesis (a big move) clearly isn't playing out.</li>
+      <li><b>Position sizing too large:</b> treating a full-premium-at-risk trade like a normal stock position instead of a defined, capped-risk bet.</li>
+    </ul>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Practice This Strategy</h2>
+    <p>Run this drill on the trading desk with GLOW preselected:</p>
+    <ol class="checklist">
+      <li><b>1.</b> Open GLOW's 1D chart and note the current price and recent volatility.</li>
+      <li><b>2.</b> Place a small <b>Market Buy</b> — this stands in for "being long volatility" ahead of a catalyst.</li>
+      <li><b>3.</b> Watch the live chart for a sudden jump (GLOW has built-in event-driven spikes). When one occurs, note how fast the mark price and unrealized P&amp;L move compared to normal ticks.</li>
+      <li><b>4.</b> Sell to close shortly after a spike, capturing the outsized move — this mirrors how a straddle captures a big move regardless of direction.</li>
+      <li><b>5.</b> Compare that outcome to holding through several quiet, range-bound ticks with no spike — in options terms, that's the theta-decay scenario working against you.</li>
+    </ol>
+    <div class="lesson-actions">
+      <a class="btn btn-buy" href="../trade.html?symbol=GLOW">Practice on GLOW &rarr;</a>
+      <button class="btn btn-ghost" id="complete-btn">Mark Lesson Complete</button>
+    </div>
+  </div>
+
+  <div class="lesson-nav">
+    <a href="short-selling.html">&larr; Short Selling</a>
+    <a href="leveraged-etf-trading.html">Next: Leveraged ETF Trading &rarr;</a>
+  </div>
+</main>
+
+<script src="../assets/js/price-engine.js"></script>
+<script src="../assets/js/portfolio-engine.js"></script>
+<script src="../assets/js/strategies-data.js"></script>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/lesson.js"></script>
+</body>
+</html>

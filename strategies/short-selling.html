@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Short Selling — Volatility Trading Academy</title>
+<meta name="description" content="Learn short selling mechanics, margin, squeeze risk, and practice with a simulated high-short-interest ticker.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>window.SITE_BASE="../"; window.ACTIVE_NAV="strategies"; window.LESSON_ID="short-selling";</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page page-narrow">
+  <div class="lesson-header">
+    <span class="lesson-tag">Lesson 3 of 7 · Volatility Rating ●●●●○</span>
+    <h1>Short Selling</h1>
+    <p style="color:var(--text-dim); margin:0;">Profiting from a stock's decline by selling borrowed shares now and buying them back later at a lower price.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>What It Is &amp; Why It's Volatile</h2>
+    <p>To short a stock, a trader borrows shares (in real markets, through their broker) and sells them immediately at the current price, receiving cash proceeds. Later, they "cover" the short by buying the same number of shares back and returning them to the lender. The profit is the difference between the price sold and the price bought back — the trader wants the price to fall.</p>
+    <p>Short selling is inherently tied to volatility and risk asymmetry. A long position's maximum loss is capped at 100% (the stock goes to zero), but a short position's potential loss is theoretically unlimited — the stock can keep rising indefinitely, and the short seller must eventually buy back shares at whatever price the market demands. That asymmetry, plus the fact that shorting requires margin, means shorts are usually placed on names already showing weakness, elevated volatility, or high short interest — all of which make sudden, violent moves more likely.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Typical Mechanics</h2>
+    <ul>
+      <li><b>Borrowing &amp; margin:</b> shorting requires a margin account. This simulator enforces a <b>150% margin requirement</b> — your account equity must cover at least 1.5x the dollar value of your total short exposure before an order is accepted, mirroring typical Reg T short-margin rules.</li>
+      <li><b>Entry signals:</b> a breakdown below support, a failed rally, deteriorating fundamentals, or a stock with unusually heavy short interest already building.</li>
+      <li><b>Exit signals ("covering"):</b> reaching a downside price target, a bounce off support that invalidates the setup, or a stop placed above a recent high to cap loss if the stock rallies instead.</li>
+      <li><b>Holding period:</b> ranges from intraday to several weeks, but shorts are usually managed more tightly than longs because of the uncapped risk.</li>
+      <li><b>Short squeezes:</b> if a heavily shorted stock rallies, short sellers rushing to cover (buy back shares) at the same time can itself drive the price sharply higher — a self-reinforcing squeeze.</li>
+    </ul>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Walkthrough Example — SHRT</h2>
+    <p><b>Shorewell Retail (SHRT)</b> is the academy's dedicated short-selling sim: high volatility (~70% annualized) with a persistent negative drift, representing a name under structural pressure and high short interest.</p>
+    <p>On the Trade page, select the <b>Short</b> side, enter a quantity, and submit. The simulator checks your account equity against the 150% margin requirement before accepting the order — if you're too small an account or already have other short exposure, it will reject the order with a clear message, just as a real broker would. Once filled, watch your Portfolio: the position shows as "Short" with unrealized P&amp;L rising as SHRT falls and falling as SHRT rises. To close it, place a <b>Cover</b> order for the same quantity.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Key Risks &amp; Common Mistakes</h2>
+    <div class="callout callout-risk">Unlimited-loss risk is real: a short position can lose far more than 100% of the initial proceeds if the stock keeps rallying and you don't cut the position. Always know your cover-stop before you enter.</div>
+    <ul>
+      <li><b>Ignoring margin calls:</b> letting a losing short erode account equity below the maintenance requirement.</li>
+      <li><b>Shorting into strength without a plan:</b> trying to call an exact top on a stock that's still in an uptrend.</li>
+      <li><b>Underestimating squeeze risk:</b> piling into an already heavily-shorted name without accounting for how fast a squeeze can move.</li>
+      <li><b>No defined stop:</b> because loss potential is uncapped, a short with no exit plan is far more dangerous than a long with no exit plan.</li>
+      <li><b>Overstaying a winning short:</b> not locking in gains as the price approaches a known support level where a bounce is likely.</li>
+    </ul>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Practice This Strategy</h2>
+    <p>Run this drill on the trading desk with SHRT preselected:</p>
+    <ol class="checklist">
+      <li><b>1.</b> Check your account equity in the header, then select <b>Short</b> and enter a quantity of SHRT that comfortably clears the 150% margin requirement.</li>
+      <li><b>2.</b> Submit the order and confirm it fills — note the cash credited to your account from the short sale proceeds.</li>
+      <li><b>3.</b> Watch the position in your Open Positions table: unrealized P&amp;L should turn green as SHRT ticks down, red as it ticks up.</li>
+      <li><b>4.</b> Decide on a mental "cover-stop" — a price above your entry where you would exit if SHRT rallies instead of falling.</li>
+      <li><b>5.</b> When SHRT has moved favorably (or hits your cover-stop), select <b>Cover</b>, enter the same quantity, and submit to close the position.</li>
+      <li><b>6.</b> Review the realized P&amp;L on your Portfolio page and confirm it matches (entry price − cover price) × shares.</li>
+    </ol>
+    <div class="lesson-actions">
+      <a class="btn btn-buy" href="../trade.html?symbol=SHRT">Practice on SHRT &rarr;</a>
+      <button class="btn btn-ghost" id="complete-btn">Mark Lesson Complete</button>
+    </div>
+  </div>
+
+  <div class="lesson-nav">
+    <a href="momentum-trading.html">&larr; Momentum Trading</a>
+    <a href="options-straddle-strangle.html">Next: Options Straddles / Strangles &rarr;</a>
+  </div>
+</main>
+
+<script src="../assets/js/price-engine.js"></script>
+<script src="../assets/js/portfolio-engine.js"></script>
+<script src="../assets/js/strategies-data.js"></script>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/lesson.js"></script>
+</body>
+</html>

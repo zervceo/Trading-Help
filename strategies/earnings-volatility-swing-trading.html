@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Earnings-Volatility Swing Trading — Volatility Trading Academy</title>
+<meta name="description" content="Learn how to trade multi-day swings around earnings-like volatility spikes, and practice with a simulated ticker.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>window.SITE_BASE="../"; window.ACTIVE_NAV="strategies"; window.LESSON_ID="earnings-volatility-swing-trading";</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page page-narrow">
+  <div class="lesson-header">
+    <span class="lesson-tag">Lesson 7 of 7 · Volatility Rating ●●●●○</span>
+    <h1>Earnings-Volatility Swing Trading</h1>
+    <p style="color:var(--text-dim); margin:0;">Holding a position through or around a known volatility catalyst — like an earnings report — for a multi-day directional swing.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>What It Is &amp; Why It's Volatile</h2>
+    <p>Swing trading holds positions for several days to a few weeks, aiming to capture a meaningful chunk of a directional move rather than the smaller, faster moves scalpers and day traders target. Earnings-volatility swing trading specifically times entries and exits around known or expected volatility catalysts — quarterly earnings reports being the classic example — where a stock's price range can expand dramatically in a single session as new information gets priced in all at once.</p>
+    <p>The volatility here is event-driven and often sharply higher than a stock's normal day-to-day range: a single earnings reaction can move a stock as much as several "normal" weeks combined, in either direction, sometimes gapping past any stop-loss set the day before.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Typical Mechanics</h2>
+    <ul>
+      <li><b>Entry approaches:</b> some swing traders enter <i>before</i> the catalyst, positioning for an expected reaction (higher risk — the outcome is genuinely unknown); others wait to enter <i>after</i> the reaction, trading the follow-through momentum once direction is confirmed (lower risk, potentially smaller reward).</li>
+      <li><b>Exit signals:</b> a multi-day price target, a trailing stop once the post-catalyst trend is established, or a fixed holding period (e.g., exit within N sessions regardless of outcome).</li>
+      <li><b>Holding period:</b> typically 2–10 trading sessions — long enough to let the post-catalyst move play out, short enough to avoid new, unrelated risk building up.</li>
+      <li><b>Position sizing:</b> should account for gap risk — since a catalyst can move price well beyond a normal day's range overnight, position sizes are usually smaller than for a similarly volatile non-event trade.</li>
+      <li><b>Gap risk:</b> unlike scalping or day trading, a swing position held through a catalyst can open the next session far away from the prior close, blowing straight through any stop order placed the day before.</li>
+    </ul>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Walkthrough Example — SWNG</h2>
+    <p><b>Swingfield Biotech (SWNG)</b> is the academy's dedicated earnings-volatility sim (~45% annualized volatility with periodic large jump events simulating earnings-style surprises), designed for exactly this drill.</p>
+    <p>On the Trade page, watch SWNG's 1D and 1W charts. Between jump events, it behaves like a normal mid-volatility stock. When a jump event fires, you'll see a sudden, outsized move — the simulated equivalent of an earnings reaction. A swing trader who entered before the jump captured (or was hurt by) the full gap; one who waits for confirmation after the jump trades the follow-through instead, with less uncertainty but potentially less reward.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Key Risks &amp; Common Mistakes</h2>
+    <div class="callout callout-risk">Stop-losses do not protect you from gap risk. A stop order placed the day before an earnings report can be blown through entirely if the stock gaps past it overnight — your actual fill price could be far worse than your intended stop.</div>
+    <ul>
+      <li><b>Oversizing an earnings-hold position:</b> treating a pre-catalyst position like a normal trade instead of accounting for outsized gap risk.</li>
+      <li><b>No plan for either outcome:</b> entering before a catalyst without a clear idea of what you'll do if it goes against you.</li>
+      <li><b>Assuming the initial reaction is the whole move:</b> earnings reactions sometimes reverse in the following sessions as the market digests details beyond the initial headline number.</li>
+      <li><b>Overholding after the catalyst has passed:</b> staying in the trade well past the volatility event with no fresh justification for holding.</li>
+    </ul>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Practice This Strategy</h2>
+    <p>Run this drill on the trading desk with SWNG preselected:</p>
+    <ol class="checklist">
+      <li><b>1.</b> Open SWNG's 1D chart and observe its baseline behavior for a stretch of calm ticks.</li>
+      <li><b>2.</b> Place a modest <b>Market Buy</b>, sized smaller than you might for a non-event trade, to account for jump/gap risk.</li>
+      <li><b>3.</b> Continue watching the chart across multiple ticks — if a sudden jump event occurs, note the size of the move relative to SWNG's normal range.</li>
+      <li><b>4.</b> If the jump was favorable, consider selling into strength rather than assuming the move continues indefinitely.</li>
+      <li><b>5.</b> If no jump occurs after a reasonable number of ticks, practice closing the position anyway — reinforcing a fixed holding-period discipline rather than waiting indefinitely for a catalyst.</li>
+    </ol>
+    <div class="lesson-actions">
+      <a class="btn btn-buy" href="../trade.html?symbol=SWNG">Practice on SWNG &rarr;</a>
+      <button class="btn btn-ghost" id="complete-btn">Mark Lesson Complete</button>
+    </div>
+  </div>
+
+  <div class="lesson-nav">
+    <a href="penny-stock-trading.html">&larr; Penny Stock Trading</a>
+    <a href="../strategies.html">Back to All Strategies &rarr;</a>
+  </div>
+</main>
+
+<script src="../assets/js/price-engine.js"></script>
+<script src="../assets/js/portfolio-engine.js"></script>
+<script src="../assets/js/strategies-data.js"></script>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/lesson.js"></script>
+</body>
+</html>
