@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day Trading / Scalping — Volatility Trading Academy</title>
+<meta name="description" content="Learn day trading and scalping mechanics, risks, and practice with a simulated high-volatility ticker.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>window.SITE_BASE="../"; window.ACTIVE_NAV="strategies"; window.LESSON_ID="day-trading-scalping";</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page page-narrow">
+  <div class="lesson-header">
+    <span class="lesson-tag">Lesson 1 of 7 · Volatility Rating ●●●○○</span>
+    <h1>Day Trading / Scalping</h1>
+    <p style="color:var(--text-dim); margin:0;">Rapid intraday entries and exits designed to capture small, frequent price moves before the market can reverse on you.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>What It Is &amp; Why It's Volatile</h2>
+    <p>Day trading means opening and closing all positions within the same session — nothing is held overnight. Scalping is the fastest sub-style: trades that last seconds to a few minutes, targeting moves of a few cents to a few percent, repeated many times a day. Because the profit target per trade is small, scalpers gravitate toward the most volatile, highest-volume tickers, where price ranges wide enough in a short window to make the strategy worth the effort — and where liquidity is deep enough to get in and out without moving the price against yourself.</p>
+    <p>The volatility is the whole point: without fast, sizable intraday swings, there's no edge to scalp. But that same volatility means a scalper who is slow to exit can give back several trades' worth of gains in a single adverse tick.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Typical Mechanics</h2>
+    <ul>
+      <li><b>Entry signals:</b> short-term momentum bursts, breaks above/below a recent intraday high or low, or a sudden spike in volume/volatility on the 1-minute chart.</li>
+      <li><b>Exit signals:</b> a fixed profit target (often well under 1%), a tight stop-loss placed just beyond the entry candle, or simply the momentum stalling out.</li>
+      <li><b>Holding period:</b> seconds to minutes — rarely more than 15–20 minutes, never overnight.</li>
+      <li><b>Position sizing:</b> scalpers typically size larger per trade than swing traders (to make a small percentage move meaningful in dollar terms) but cap total risk per trade to a small fraction of account equity, because the strategy depends on a high win rate across many repeated trades rather than any single big winner.</li>
+      <li><b>Order types:</b> market orders for speed on entry, though experienced scalpers often use tight limit orders to control exact fill price when the spread matters.</li>
+    </ul>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Walkthrough Example — VLTX</h2>
+    <p><b>Voltix Robotics (VLTX)</b> is one of the academy's high-volatility momentum sims (~65% annualized volatility), which makes it a realistic scalping sandbox — its 1-minute chart shows frequent multi-percent swings.</p>
+    <p>A typical scalp: watch the 1D chart on the Trade page. When VLTX ticks up sharply off a short base with rising momentum, buy a market order for, say, 100 shares. Set a mental stop a few ticks below your entry and a target roughly 1.5–2x your risk. If the price keeps pushing in your favor, sell into strength rather than waiting for a reversal. If it stalls or turns against you immediately, sell and take the small loss — don't let a scalp turn into an accidental swing trade.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Key Risks &amp; Common Mistakes</h2>
+    <div class="callout callout-risk">Transaction costs and slippage matter enormously at this frequency — even with zero commission in this simulator, in real markets the bid/ask spread alone can erode a scalper's edge if trade counts are high.</div>
+    <ul>
+      <li><b>Overtrading:</b> forcing trades when there's no clean setup, just to stay active.</li>
+      <li><b>Moving the stop:</b> widening a stop-loss after entry because "it'll come back" — the single most common way small losses become large ones.</li>
+      <li><b>Letting winners become losers:</b> hesitating to take a fast, small profit and watching it round-trip back to breakeven or worse.</li>
+      <li><b>Revenge trading:</b> immediately re-entering after a loss to "win it back," which compounds mistakes under emotional pressure.</li>
+      <li><b>Ignoring the bigger trend:</b> scalping against a strong intraday trend increases the odds each individual scalp fails.</li>
+    </ul>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Practice This Strategy</h2>
+    <p>Run this drill on the trading desk with VLTX preselected:</p>
+    <ol class="checklist">
+      <li><b>1.</b> Open the 1D chart for VLTX and watch two or three price ticks go by to gauge current momentum.</li>
+      <li><b>2.</b> When you see a short, sharp move in one direction, place a <b>Market Buy</b> for a small quantity (e.g. 25–100 shares).</li>
+      <li><b>3.</b> Set a target in your head of roughly 1–2% above your fill price, and a "stop" of about 0.5–1% below it.</li>
+      <li><b>4.</b> Watch the live price and mark price in your Open Positions table — the moment your target is hit, place a <b>Market Sell</b> to close.</li>
+      <li><b>5.</b> If the price instead drops toward your mental stop, sell immediately rather than waiting for a bounce.</li>
+      <li><b>6.</b> Repeat 3–4 times and review your Execution Log — how many trades were winners, and did you actually respect your own exit rules?</li>
+    </ol>
+    <div class="lesson-actions">
+      <a class="btn btn-buy" href="../trade.html?symbol=VLTX">Practice on VLTX &rarr;</a>
+      <button class="btn btn-ghost" id="complete-btn">Mark Lesson Complete</button>
+    </div>
+  </div>
+
+  <div class="lesson-nav">
+    <a href="../strategies.html">&larr; All Strategies</a>
+    <a href="momentum-trading.html">Next: Momentum Trading &rarr;</a>
+  </div>
+</main>
+
+<script src="../assets/js/price-engine.js"></script>
+<script src="../assets/js/portfolio-engine.js"></script>
+<script src="../assets/js/strategies-data.js"></script>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/lesson.js"></script>
+</body>
+</html>

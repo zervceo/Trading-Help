@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trade — Volatility Trading Academy</title>
+<meta name="description" content="Simulated trading desk: buy, sell, short, and cover fictitious tickers with market and limit orders.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>window.SITE_BASE=""; window.ACTIVE_NAV="trade";</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page">
+  <div class="grid" style="grid-template-columns: 2fr 1fr; align-items:start;">
+    <div>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:14px;">
+          <div>
+            <select id="ticker-select" style="width:auto; min-width:220px; margin-bottom:10px;"></select>
+            <div>
+              <span class="mono" id="quote-price" style="font-size:32px;font-weight:800;">--</span>
+              <span class="mono" id="quote-change" style="font-size:15px;font-weight:700;margin-left:10px;">--</span>
+            </div>
+            <div style="color:var(--text-faint);font-size:12px;margin-top:2px;" id="quote-name">--</div>
+          </div>
+          <div class="range-select" id="range-select">
+            <button class="range-btn" data-range="1D">1D</button>
+            <button class="range-btn" data-range="1W">1W</button>
+            <button class="range-btn" data-range="1M">1M</button>
+            <button class="range-btn" data-range="3M">3M</button>
+            <button class="range-btn" data-range="1Y">1Y</button>
+          </div>
+        </div>
+        <div class="chart-box" style="margin-top:16px;"><canvas id="main-chart"></canvas></div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">Open Positions</div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr>
+              <th>Symbol</th><th>Side</th><th>Qty</th><th>Avg Cost</th><th>Mark</th><th>Mkt Value</th><th>Unrealized</th><th>%</th>
+            </tr></thead>
+            <tbody id="positions-body"><tr class="empty-row"><td colspan="8">Loading…</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">Execution Log</div>
+        <div class="log" id="exec-log"></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card" style="position:sticky; top:calc(var(--header-h) + 16px);">
+        <div class="section-title">Order Ticket</div>
+        <div id="order-alert"></div>
+
+        <div class="side-toggle" id="side-toggle">
+          <button class="side-btn" data-side="buy">Buy</button>
+          <button class="side-btn" data-side="sell">Sell</button>
+          <button class="side-btn" data-side="short">Short</button>
+          <button class="side-btn" data-side="cover">Cover</button>
+        </div>
+
+        <div class="tabs" id="type-tabs">
+          <button class="tab-btn" data-type="market">Market</button>
+          <button class="tab-btn" data-type="limit">Limit</button>
+        </div>
+
+        <div class="field">
+          <label for="qty-input">Quantity (shares)</label>
+          <input type="number" id="qty-input" min="1" step="1" value="10">
+        </div>
+
+        <div class="field" id="limit-field">
+          <label for="limit-input">Limit Price</label>
+          <input type="number" id="limit-input" min="0.01" step="0.01" placeholder="0.00">
+        </div>
+
+        <div style="font-size:12.5px;color:var(--text-dim);display:flex;justify-content:space-between;margin-bottom:10px;">
+          <span>Est. Total</span><span class="mono" id="est-total">$0.00</span>
+        </div>
+        <div style="font-size:12px;color:var(--text-faint);display:flex;justify-content:space-between;margin-bottom:14px;">
+          <span id="avail-label">Buying Power</span><span class="mono" id="avail-value">--</span>
+        </div>
+
+        <button class="btn btn-block btn-buy" id="submit-order">Buy</button>
+
+        <p style="font-size:11.5px;color:var(--text-faint);margin-top:12px;line-height:1.5;">
+          Market orders fill instantly at the live simulated price. Limit orders queue and fill automatically once the price crosses your limit. Shorting requires 150% margin coverage.
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/js/price-engine.js"></script>
+<script src="assets/js/portfolio-engine.js"></script>
+<script src="assets/js/strategies-data.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/charts.js"></script>
+<script src="assets/js/trade.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Momentum Trading — Volatility Trading Academy</title>
+<meta name="description" content="Learn momentum trading mechanics, risks, and practice with a simulated high-beta ticker.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>window.SITE_BASE="../"; window.ACTIVE_NAV="strategies"; window.LESSON_ID="momentum-trading";</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page page-narrow">
+  <div class="lesson-header">
+    <span class="lesson-tag">Lesson 2 of 7 · Volatility Rating ●●●○○</span>
+    <h1>Momentum Trading</h1>
+    <p style="color:var(--text-dim); margin:0;">Riding stocks with strong directional volume and price moves, on the premise that a trend already in motion tends to continue.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>What It Is &amp; Why It's Volatile</h2>
+    <p>Momentum trading buys stocks that are already moving strongly higher (or shorts ones moving strongly lower), betting that the trend continues rather than reverses. It's built entirely around volatility and volume: a momentum trader specifically seeks out stocks that are breaking out of normal trading ranges, because that's the signature of new information, new demand, or a crowd of traders piling into the same idea at once.</p>
+    <p>Because momentum feeds on itself — rising prices attract more buyers, which pushes prices higher still — momentum names can move much faster than the broader market in either direction, and can reverse just as sharply once the buying (or selling) pressure exhausts itself.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Typical Mechanics</h2>
+    <ul>
+      <li><b>Entry signals:</b> a breakout above a recent multi-day high on above-average volume, a sustained series of higher highs and higher lows, or a strong directional move following a catalyst.</li>
+      <li><b>Exit signals:</b> a trailing stop that follows price higher and exits when momentum clearly stalls (e.g., the first lower low, or volume drying up), rather than a fixed price target.</li>
+      <li><b>Holding period:</b> anywhere from part of a day to several days or weeks — momentum trades are typically held longer than scalps but shorter than long-term investments.</li>
+      <li><b>Position sizing:</b> sized to the stock's volatility — the higher the average daily range, the smaller the share count needed to keep dollar risk consistent.</li>
+    </ul>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Walkthrough Example — MOJO</h2>
+    <p><b>Mojo Beverage Co (MOJO)</b> is one of the academy's momentum sims (~55% annualized volatility, positive drift), prone to multi-day directional runs.</p>
+    <p>On the Trade page, switch MOJO's chart to the 1W or 1M range. If you see the price has been making a series of higher highs over the past several sessions with the trend still intact, that's a momentum setup. Buy on strength rather than waiting for a pullback (momentum traders often say "buy high, sell higher"). Trail your exit: instead of a fixed target, plan to sell once the price makes its first clear lower swing versus the immediately preceding one — that's the trend showing its first sign of stalling.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Key Risks &amp; Common Mistakes</h2>
+    <div class="callout callout-risk">Momentum can reverse without warning — the same volatility that produced the rally can produce an equally fast unwind, especially once late buyers run out.</div>
+    <ul>
+      <li><b>Chasing extended moves:</b> entering after a stock has already run a long way, with little room left before an inevitable pullback.</li>
+      <li><b>No trailing exit plan:</b> holding through the entire reversal because there was never a rule for when to sell.</li>
+      <li><b>Confusing momentum with a story:</b> trading the news narrative instead of the actual price/volume behavior.</li>
+      <li><b>Ignoring volume:</b> a price move on thin volume is far less reliable than one on heavy volume.</li>
+      <li><b>Fighting the trend:</b> trying to pick the top of a strong uptrend by shorting into strength.</li>
+    </ul>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Practice This Strategy</h2>
+    <p>Run this drill on the trading desk with MOJO preselected:</p>
+    <ol class="checklist">
+      <li><b>1.</b> Switch the chart to the 1W range and identify whether MOJO is in a clear uptrend (higher highs, higher lows).</li>
+      <li><b>2.</b> If the trend looks intact, place a <b>Market Buy</b> for a moderate position size.</li>
+      <li><b>3.</b> Do not set a fixed sell target — instead, watch the live 1D chart for the trend continuing.</li>
+      <li><b>4.</b> The moment the price makes a clear swing low below its prior swing low, treat that as your trailing-stop signal.</li>
+      <li><b>5.</b> Place a <b>Market Sell</b> to exit on that signal, rather than hoping for a bounce.</li>
+      <li><b>6.</b> In your Portfolio, compare the realized P&amp;L from letting the trend run versus what a fixed, tight target would have captured.</li>
+    </ol>
+    <div class="lesson-actions">
+      <a class="btn btn-buy" href="../trade.html?symbol=MOJO">Practice on MOJO &rarr;</a>
+      <button class="btn btn-ghost" id="complete-btn">Mark Lesson Complete</button>
+    </div>
+  </div>
+
+  <div class="lesson-nav">
+    <a href="day-trading-scalping.html">&larr; Day Trading / Scalping</a>
+    <a href="short-selling.html">Next: Short Selling &rarr;</a>
+  </div>
+</main>
+
+<script src="../assets/js/price-engine.js"></script>
+<script src="../assets/js/portfolio-engine.js"></script>
+<script src="../assets/js/strategies-data.js"></script>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/lesson.js"></script>
+</body>
+</html>

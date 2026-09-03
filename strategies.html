@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strategies — Volatility Trading Academy</title>
+<meta name="description" content="Seven volatility trading strategy lessons with practice drills and progress tracking.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>window.SITE_BASE=""; window.ACTIVE_NAV="strategies";</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page">
+  <h1 style="margin:0 0 6px;">The 7 Volatility Strategies</h1>
+  <p style="color:var(--text-dim); margin:0 0 24px; max-width:680px;">Each lesson explains the mechanics, walks through a concrete example on a simulated ticker, and ends with a practice drill on the trading desk.</p>
+
+  <div class="card" id="progress" style="margin-bottom:24px;">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+      <div class="section-title" style="margin:0;">Learn Progress</div>
+      <span class="mono" id="progress-pct" style="font-weight:700;">0%</span>
+    </div>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-fill" style="width:0%;"></div></div>
+    <div style="margin-top:8px; font-size:13px; color:var(--text-dim);" id="progress-count">0 / 7 lessons complete</div>
+  </div>
+
+  <div class="strategy-grid" id="strategy-grid"></div>
+</main>
+
+<script src="assets/js/price-engine.js"></script>
+<script src="assets/js/portfolio-engine.js"></script>
+<script src="assets/js/strategies-data.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/strategies.js"></script>
+</body>
+</html>

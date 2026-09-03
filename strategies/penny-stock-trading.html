@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Penny Stock Trading — Volatility Trading Academy</title>
+<meta name="description" content="Learn penny stock volatility, liquidity risk, pump-and-dump awareness, and practice with a simulated low-float ticker.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>window.SITE_BASE="../"; window.ACTIVE_NAV="strategies"; window.LESSON_ID="penny-stock-trading";</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="page page-narrow">
+  <div class="lesson-header">
+    <span class="lesson-tag">Lesson 6 of 7 · Volatility Rating ●●●●●</span>
+    <h1>Penny Stock Trading</h1>
+    <p style="color:var(--text-dim); margin:0;">Low-price, low-float stocks that can move enormous percentages on light volume — and can be manipulated just as easily.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>What It Is &amp; Why It's Volatile</h2>
+    <p>Penny stocks trade at very low share prices (often under $5, sometimes fractions of a dollar) and frequently have a small "float" — the number of shares actually available for public trading. A small float means it doesn't take much buying or selling pressure to move the price dramatically: a modest dollar amount chasing a thinly-traded stock can send it up or down by double-digit percentages in minutes.</p>
+    <p>This combination of low price, low float, and often limited public information about the underlying company makes penny stocks among the most volatile and least predictable instruments a retail trader can access — and among the most susceptible to manipulation.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Typical Mechanics</h2>
+    <ul>
+      <li><b>Entry signals:</b> an unusual spike in volume relative to the stock's normal (often tiny) average, frequently the first sign something — news, promotion, or manipulation — is happening.</li>
+      <li><b>Liquidity risk:</b> the bid/ask spread can be wide, and there may not be enough buyers on the other side when you want to sell, especially in a fast-moving name.</li>
+      <li><b>Exit signals:</b> extremely tight, active management — momentum can vanish as fast as it appeared, so many penny traders exit into strength rather than waiting for a target.</li>
+      <li><b>Holding period:</b> usually minutes to a single session; holding penny stocks longer sharply increases exposure to gap risk and illiquidity.</li>
+      <li><b>Position sizing:</b> should be small relative to account size specifically because of the elevated risk of a total, fast loss.</li>
+    </ul>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Walkthrough Example — ZAP</h2>
+    <p><b>Zapline Energy (ZAP)</b> is the academy's pump-and-dump-style sim: a sub-$2 price, extreme volatility (~130% annualized), and built-in large jump events that mimic sudden hype-driven spikes followed by equally sharp collapses.</p>
+    <p>On the Trade page, open ZAP's 1D chart. You'll likely see periods of relative calm punctuated by sudden, outsized spikes — exactly the pattern of a promotional pump followed by a dump once early buyers cash out. The lesson here isn't "how to catch the spike perfectly" (extremely hard even for professionals) — it's to feel firsthand how fast a small-account position can swing, and how dangerous it is to buy after a spike has already happened, chasing a move that may already be reversing.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Key Risks &amp; Common Mistakes</h2>
+    <div class="callout callout-risk">Pump-and-dump schemes are a real and well-documented pattern in low-float, low-price stocks: promoters hype a stock to attract buyers, insiders sell into that demand, and the price collapses once promotion stops — often leaving late buyers with steep losses.</div>
+    <ul>
+      <li><b>Chasing the spike:</b> buying only after a big move has already happened, often right before the reversal.</li>
+      <li><b>Oversizing positions:</b> treating a penny stock like a normal-sized position instead of a small, speculative allocation.</li>
+      <li><b>Trusting unverified hype:</b> acting on social media tips or promotional messages without independent research.</li>
+      <li><b>Underestimating illiquidity:</b> assuming you can exit instantly at the price you see — in real, thinly-traded names, large orders can move the price against you on the way out.</li>
+      <li><b>No stop discipline:</b> in a stock this volatile, the absence of a firm exit plan can turn a small position into a large, fast loss.</li>
+    </ul>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Practice This Strategy</h2>
+    <p>Run this drill on the trading desk with ZAP preselected:</p>
+    <ol class="checklist">
+      <li><b>1.</b> Open ZAP's 1D chart and watch for at least a dozen ticks to observe its baseline volatility before doing anything.</li>
+      <li><b>2.</b> Place a deliberately small <b>Market Buy</b> — a fraction of the size you'd use on a blue-chip sim — to respect the elevated risk.</li>
+      <li><b>3.</b> If you notice a sudden spike after you're already in the position, consider selling into that strength rather than assuming it will continue.</li>
+      <li><b>4.</b> If no spike occurs and the price simply drifts, practice exiting for a small loss or scratch rather than waiting indefinitely for one.</li>
+      <li><b>5.</b> Review your Execution Log afterward and note how much faster ZAP's price moved tick-to-tick compared to a blue-chip sim like STDY.</li>
+    </ol>
+    <div class="lesson-actions">
+      <a class="btn btn-buy" href="../trade.html?symbol=ZAP">Practice on ZAP &rarr;</a>
+      <button class="btn btn-ghost" id="complete-btn">Mark Lesson Complete</button>
+    </div>
+  </div>
+
+  <div class="lesson-nav">
+    <a href="leveraged-etf-trading.html">&larr; Leveraged ETF Trading</a>
+    <a href="earnings-volatility-swing-trading.html">Next: Earnings-Volatility Swing Trading &rarr;</a>
+  </div>
+</main>
+
+<script src="../assets/js/price-engine.js"></script>
+<script src="../assets/js/portfolio-engine.js"></script>
+<script src="../assets/js/strategies-data.js"></script>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/lesson.js"></script>
+</body>
+</html>
